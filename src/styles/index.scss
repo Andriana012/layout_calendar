@@ -18,7 +18,7 @@ body {
   @for $i from 28 through 31 {
     &--month-length-#{$i} {
       @for $k from $i through 31 {
-        :nth-child(#{$k + 1}) {
+        .calendar__day:nth-child(#{$k + 1}) {
           display: none;
         }
       }
@@ -46,7 +46,8 @@ body {
     border: 1px solid black;
 
     &:hover {
-      transition: all 500ms;
+      transition:
+        all 500ms;
       transform: translateY(-20px);
       background-color: $day-hover;
     }
